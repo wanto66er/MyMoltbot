@@ -1,0 +1,22 @@
+{
+  "name": "webpage-change-monitor",
+  "version": "1.0.0",
+  "description": "Monitor webpages for changes and notify via OpenClaw",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpage",
+    "monitor",
+    "changes",
+    "notifications",
+    "scraper"
+  ],
+  "author": "OpenClaw Assistant",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.13.4"
+  }
+}
