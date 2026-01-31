@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage Monitoring Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Webpage Monitoring Dashboard</h1>
+      <p>Track changes to your favorite webpages with real-time alerts</p>
+    </header>
+
+    <main>
+      <section class="add-task-section">
+        <h2>Add New Monitoring Task</h2>
+        <form id="add-task-form">
+          <div class="form-group">
+            <label for="task-name">Task Name</label>
+            <input type="text" id="task-name" required placeholder="e.g., News Site Updates">
+          </div>
+          
+          <div class="form-group">
+            <label for="task-url">Webpage URL</label>
+            <input type="url" id="task-url" required placeholder="https://example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="check-interval">Check Interval (minutes)</label>
+            <select id="check-interval">
+              <option value="60">Every Hour</option>
+              <option value="30">Every 30 Minutes</option>
+              <option value="15">Every 15 Minutes</option>
+              <option value="5">Every 5 Minutes</option>
+              <option value="1440">Every Day</option>
+            </select>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <label for="task-enabled">
+              <input type="checkbox" id="task-enabled" checked>
+              Enable this task
+            </label>
+          </div>
+          
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section class="tasks-section">
+        <h2>Active Monitoring Tasks</h2>
+        <div id="tasks-container">
+          <!-- Tasks will be populated here -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
